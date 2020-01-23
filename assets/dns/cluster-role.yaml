@@ -13,3 +13,11 @@ rules:
   verbs:
   - list
   - watch
+- apiGroups:
+  - lighthouse.submariner.io
+  resources:
+  - multiclusterservices
+  verbs:
+  - list
+  - watch
+  - get
