@@ -35,7 +35,10 @@ var corefileTemplate = template.Must(template.New("Corefile").Parse(`{{range .Se
     kubernetes {{.ClusterDomain}} in-addr.arpa ip6.arpa {
         pods insecure
         upstream
-        fallthrough in-addr.arpa ip6.arpa
+        fallthrough
+    }
+    lighthouse {{.ClusterDomain}} {
+           fallthrough
     }
     prometheus :9153
     forward . /etc/resolv.conf {
