@@ -23,14 +23,14 @@ spec:
       containers:
       - name: dns-operator
         terminationMessagePolicy: FallbackToLogsOnError
-        image: quay.io/submariner/lighthouse-cluster-dns-operator:0.0.1
+        image: quay.io/submariner/lighthouse-cluster-dns-operator:0.3.0
         command:
         - dns-operator
         env:
         - name: RELEASE_VERSION
           value: "0.0.1-snapshot"
         - name: IMAGE
-          value: quay.io/submariner/lighthouse-coredns:v0.0.1
+          value: quay.io/submariner/openshift-lighthouse-coredns:0.3.0
         - name: OPENSHIFT_CLI_IMAGE
           value: openshift/origin-cli:v4.0
         resources:
